@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.noelledotjpg.paleterrace.block.ModBlocks;
+import net.noelledotjpg.paleterrace.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -23,6 +24,7 @@ public class PaleTerrace {
         IEventBus modEventBus = context.getModEventBus();
 
         ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

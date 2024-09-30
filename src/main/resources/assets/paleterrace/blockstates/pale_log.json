@@ -1,7 +1,16 @@
 {
   "variants": {
-    "axis=x": { "model": "paleterrace:block/pale_log", "x": 90, "y": 90 },
-    "axis=y": { "model": "paleterrace:block/pale_log" },
-    "axis=z": { "model": "paleterrace:block/pale_log", "x": 90 }
+    "axis=x": {
+      "model": "paleterrace:block/pale_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "paleterrace:block/pale_log"
+    },
+    "axis=z": {
+      "model": "paleterrace:block/pale_log_horizontal",
+      "x": 90
+    }
   }
 }

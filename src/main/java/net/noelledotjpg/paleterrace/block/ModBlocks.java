@@ -24,8 +24,24 @@ public class ModBlocks {
     public static final RegistryObject<Block> PALE_DIRT = registerBlock("pale_dirt",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_GRAY)
                     .strength(0.5F)
-                    .sound(SoundType.MUD)
                     .sound(SoundType.PACKED_MUD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+
+    public static final RegistryObject<Block> WILTED_GRASS_BLOCK = registerBlock("wilted_grass_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_GRAY)
+                    .strength(0.5F)
+                    .sound(SoundType.PACKED_MUD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> PALE_LOG = registerBlock("pale_log",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_GRAY)
+                    .strength(0.5F)
+                    .sound(SoundType.PACKED_MUD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> CRACKED_PALE_LOG = registerBlock("cracked_pale_log",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_GRAY)
+                    .strength(0.5F)
+                    .sound(SoundType.PACKED_MUD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
@@ -43,3 +59,4 @@ public class ModBlocks {
         BLOCKS.register(eventBus);
     }
 }
+
