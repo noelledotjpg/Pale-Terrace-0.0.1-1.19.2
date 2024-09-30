@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "paleterrace:block/pale_dirt"
+  }
+}

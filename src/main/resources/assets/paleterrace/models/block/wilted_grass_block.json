@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "minecraft:block/grass_block_top",
+    "bottom": "paleterrace:block/pale_dirt",
+    "side": "paleterrace:block/wilted_grass_block"
+  }
+}

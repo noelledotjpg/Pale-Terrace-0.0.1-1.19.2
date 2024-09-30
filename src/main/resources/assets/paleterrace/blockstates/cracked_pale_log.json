@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": { "model": "paleterrace:block/cracked_pale_log", "x": 90, "y": 90 },
+    "axis=y": { "model": "paleterrace:block/cracked_pale_log" },
+    "axis=z": { "model": "paleterrace:block/cracked_pale_log", "x": 90 }
+  }
+}
