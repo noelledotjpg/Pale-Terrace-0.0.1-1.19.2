@@ -7,11 +7,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.noelledotjpg.paleterrace.PaleTerrace;
+import net.noelledotjpg.paleterrace.item.ModItems;
 
 import java.util.function.Supplier;
 
@@ -20,19 +22,20 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, PaleTerrace.MOD_ID);
 
     public static final RegistryObject<Block> PALE_DIRT = registerBlock("pale_dirt",
-           () -> new Block(new BlockBehaviour.Properties().of(Material.DIRT)
-                 .strength(0.5F)
-                 .tab(CreativeModeTab.TAB_BUILDING_BLOCKS)
-                 .sound(SoundType.MUD)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_GRAY)
+                    .strength(0.5F)
+                    .sound(SoundType.MUD)
+                    .sound(SoundType.PACKED_MUD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
-    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
-                                                                           CreativeModeTab tab) {
+                                                                            CreativeModeTab tab) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 
